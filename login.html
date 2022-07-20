@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <style>
+           * {
+            font-family: 'Lato', sans-serif;
+           }
+
+           body {
+               background-color: #9D59BE;
+           }
+            @media only screen and (max-width: 650px) {
+                body {
+                    background-color: lightblue;
+                }
+            }
+                
+           .login-div {
+               max-width: 650px;
+               background-color: white;
+               margin: 120px auto;
+               border-radius: 12px;
+               display: flex;
+               flex-wrap: wrap;
+           }
+
+    
+           .logo-img {
+                height: 250px;
+                background: url('login_icon.png') no-repeat center;
+                background-size: contain;
+                width: 100%;
+           }
+
+           .center {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+           }
+
+           .content {
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+           }
+
+           .title {
+               font-weight: bold;
+               font-size: 20px;
+               margin: 40px 0;
+           }
+
+           .form input {
+               border: none;
+               outline: none;
+               background: none;
+               padding: 10px 75px 10px 0;
+           }
+
+           .email, .password {
+               border: 1px solid #F0F5F5;
+               border-radius: 30px;
+               background: #F0F5F5;
+               margin-bottom: 15px;  
+           }
+
+           .svg-icon {
+               height: 20px;
+               margin: -5px 10px;
+           }
+
+           .sign-in {
+               background-color: white;
+               color: black;
+               border: 2px solid #39E600;
+               text-align: center;
+               font-weight: bold;
+               border-radius: 30px;
+               padding: 5px 30px;
+               margin: 10px 0;
+               cursor: pointer;
+               transition-duration: 0.4s;
+           }
+
+           .sign-in:hover {
+               background-color: #39E600;
+               color: white;
+           }
+
+           .forgot-password, .sign-up {
+                border: none;
+                background: none; 
+                cursor: pointer;
+                transition-duration: 0.4s;
+           }
+
+           .sign-up {
+               margin: 50px 0 25px;
+           }
+
+           .forgot-password:hover, .sign-up:hover {
+            color: #008CBA;
+           }
+          
+           .svg {
+               width: 15px;
+               height: 20px;
+               margin-bottom: -5px;
+           }
+
+           /* For desktop: */
+                .col-1 {width: 8.33%;}
+                .col-2 {width: 16.66%;}
+                .col-3 {width: 25%;}
+                .col-4 {width: 33.33%;}
+                .col-5 {width: 41.66%;}
+                .col-6 {width: 50%;}
+                .col-7 {width: 58.33%;}
+                .col-8 {width: 66.66%;}
+                .col-9 {width: 75%;}
+                .col-10 {width: 83.33%;}
+                .col-11 {width: 91.66%;}
+                .col-12 {width: 100%;}
+
+            @media only screen and (max-width: 768px) {
+            /* For mobile phones: */
+            [class*="col-"] {
+                width: 100%;
+            }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="col-12 login-div">
+            <div class="col-4 center">
+                <div class="logo-img"></div>
+            </div>
+
+            <div class="content col-8">
+                <div class="title">Member Login</div>
+
+                <div class="form">
+                    <div class="email">
+                        <svg class="svg-icon" viewBox="0 0 20 20">
+							<path d="M17.388,4.751H2.613c-0.213,0-0.389,0.175-0.389,0.389v9.72c0,0.216,0.175,0.389,0.389,0.389h14.775c0.214,0,0.389-0.173,0.389-0.389v-9.72C17.776,4.926,17.602,4.751,17.388,4.751 M16.448,5.53L10,11.984L3.552,5.53H16.448zM3.002,6.081l3.921,3.925l-3.921,3.925V6.081z M3.56,14.471l3.914-3.916l2.253,2.253c0.153,0.153,0.395,0.153,0.548,0l2.253-2.253l3.913,3.916H3.56z M16.999,13.931l-3.921-3.925l3.921-3.925V13.931z"></path>
+						</svg>
+                        <input tyle="email" placeholder="Email"/>
+                    </div>
+                        
+                    <div class="password">
+                        <svg class="svg-icon" viewBox="0 0 20 20">
+							<path d="M17.308,7.564h-1.993c0-2.929-2.385-5.314-5.314-5.314S4.686,4.635,4.686,7.564H2.693c-0.244,0-0.443,0.2-0.443,0.443v9.3c0,0.243,0.199,0.442,0.443,0.442h14.615c0.243,0,0.442-0.199,0.442-0.442v-9.3C17.75,7.764,17.551,7.564,17.308,7.564 M10,3.136c2.442,0,4.43,1.986,4.43,4.428H5.571C5.571,5.122,7.558,3.136,10,3.136 M16.865,16.864H3.136V8.45h13.729V16.864z M10,10.664c-0.854,0-1.55,0.696-1.55,1.551c0,0.699,0.467,1.292,1.107,1.485v0.95c0,0.243,0.2,0.442,0.443,0.442s0.443-0.199,0.443-0.442V13.7c0.64-0.193,1.106-0.786,1.106-1.485C11.55,11.36,10.854,10.664,10,10.664 M10,12.878c-0.366,0-0.664-0.298-0.664-0.663c0-0.366,0.298-0.665,0.664-0.665c0.365,0,0.664,0.299,0.664,0.665C10.664,12.58,10.365,12.878,10,12.878"></path>
+						</svg>
+                        <input tyle="password" placeholder="Password"/>
+                    </div>  
+                </div>
+                
+                <div>
+                    <button class="sign-in">LOGIN</button>
+                </div>
+                   
+                <div>
+                    <button class="forgot-password ">Forgot Username/ Password?</button>
+                </div>
+                
+                <div>
+                    <button class="sign-up">Create your Account </button>
+                    <svg class="svg"
+                        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:dc="http://purl.org/dc/elements/1.1/"
+                        xmlns:ns1="http://sozi.baierouge.fr"
+                        xmlns:cc="http://web.resource.org/cc/"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                        id="Layer_1"
+                        enable-background="new 0 0 150 50"
+                        xml:space="preserve"
+                        viewBox="0 0 150 50"
+                        version="1.1"
+                        y="0px"
+                        x="0px"
+                    >
+                        <g>
+                            <line
+                                y2="24.704"
+                                x1="1.266"
+                                x2="125.3"
+                                stroke="#000000"
+                                stroke-miterlimit="10"
+                                y1="24.704"
+                                stroke-width="6"
+                            />
+                            <polygon
+                                points="124.4 6.284 124.4 44.606 148.35 23.69"
+                            />
+                        </g>
+                        <metadata>
+                            <rdf:RDF>
+                                <cc:Work>
+                                    <dc:format>image/svg+xml</dc:format>
+                                    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+                                    <cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/>
+                                    <dc:publisher>
+                                        <cc:Agent rdf:about="http://openclipart.org/">
+                                            <dc:title>Openclipart</dc:title>
+                                        </cc:Agent> 
+                                    </dc:publisher>
+                                </cc:Work>
+                                <cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/">
+                                    <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+                                    <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+                                    <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+                                </cc:License>
+                            </rdf:RDF>
+                        </metadata>
+                    </svg>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
